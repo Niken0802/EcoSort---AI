@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b2b">
+<title>EcoSort AI — Smart Waste Recognition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">♻</span><span>EcoSort <b>AI</b><small>SMART WASTE ASSISTANT</small></span></a>
+  <nav><a href="#how">How it works</a><a href="#impact">Our impact</a><a href="#about">About</a></nav>
+  <a class="nav-cta" href="#scanner">Try prototype <span>↗</span></a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span></span> TECHNOLOGY FOR A CIRCULAR FUTURE</div>
+    <h1>Waste less.<br><em>Sort smarter.</em></h1>
+    <p class="lead">A mobile-first concept that helps people identify common waste categories, learn how to sort them, and discover the next step toward responsible recycling.</p>
+    <div class="hero-actions"><a class="primary" href="#scanner">Try the demo <span>→</span></a><a class="text-link" href="#how">Explore how it works ↓</a></div>
+    <div class="trust-row"><span>✳ AI-assisted concept</span><span>◎ SDG 11 · 12 · 13</span></div>
+  </div>
+  <div class="hero-art" aria-label="Waste sorting illustration">
+    <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    <div class="phone">
+      <div class="phone-top"><span>9:41</span><span>●●● ▰</span></div>
+      <div class="phone-content"><div class="app-greeting">Hello, eco hero! <span>☀</span></div><p class="mini-muted">Make your next waste decision count.</p>
+        <div class="scan-card"><div class="scan-icon">⌗</div><b>Scan your waste</b><span>Identify · Learn · Act</span><div class="fake-scan">♻</div></div>
+        <div class="phone-stats"><div><b>4</b><span>Categories</span></div><div><b>3</b><span>Simple steps</span></div></div>
+        <div class="phone-tip"><b>Today's tip</b><p>Check local recycling rules before dropping off an item.</p></div>
+      </div>
+    </div>
+    <div class="floating-card card-top"><span class="float-icon">✦</span><div><b>Smarter sorting</b><small>Guidance at your fingertips</small></div></div>
+    <div class="floating-card card-bottom"><span class="leaf-icon">↗</span><div><b>From scan to action</b><small>Make recycling easier</small></div></div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div><strong>01</strong><span>Capture an item</span></div><div><strong>02</strong><span>Review a category</span></div><div><strong>03</strong><span>Choose the next step</span></div>
+</section>
+
+<section class="section scanner-section" id="scanner">
+  <div class="section-heading"><div class="eyebrow">INTERACTIVE PROTOTYPE</div><h2>Give an item a <em>second look.</em></h2><p>Upload a photo and explore the planned EcoSort user flow. This demo uses a simulated prediction, not a trained AI model.</p></div>
+  <div class="scanner-grid">
+    <div class="upload-panel">
+      <label class="upload-zone" for="imageInput" id="uploadZone">
+        <input type="file" id="imageInput" accept="image/*">
+        <div id="uploadPlaceholder"><div class="upload-symbol">↑</div><b>Drop a waste photo here</b><span>or tap to browse your device</span><small>JPG, PNG or WEBP</small></div>
+        <img id="preview" alt="Uploaded waste preview" hidden>
+      </label>
+      <div class="form-row"><label for="categorySelect">Demo category</label><select id="categorySelect"><option value="Plastic">Plastic</option><option value="Paper">Paper & cardboard</option><option value="Metal">Metal</option><option value="Organic">Organic waste</option></select></div>
+      <button class="primary full" id="analyzeBtn">Show sorting guidance <span>→</span></button>
+      <p class="fine-print">Prototype notice: choose a category to simulate the result screen. No image is uploaded to a server.</p>
+    </div>
+    <div class="result-panel" id="resultPanel">
+      <div class="result-empty" id="emptyState"><div class="empty-icon">♻</div><h3>Your sorting result will appear here</h3><p>Add a photo, choose a demo category, and tap “Show sorting guidance”.</p><div class="result-steps"><span>01 Scan</span><span>02 Review</span><span>03 Act</span></div></div>
+      <div id="resultState" hidden>
+        <div class="result-label"><span class="status-dot"></span> DEMO RESULT · SIMULATED</div>
+        <div class="result-title"><div><span class="result-kicker">SUGGESTED CATEGORY</span><h3 id="resultCategory">Plastic</h3></div><div class="category-icon" id="categoryIcon">♻</div></div>
+        <p id="resultSummary" class="result-summary"></p>
+        <div class="guidance-box"><b>Recommended next steps</b><ol id="guidanceList"></ol></div>
+        <div class="notice">Always follow your local waste collection rules. This result is a demonstration and is not an AI prediction.</div>
+        <button class="secondary full" id="resetBtn">Try another item ↻</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section how-section" id="how">
+  <div class="section-heading"><div class="eyebrow">THE PROPOSED WORKFLOW</div><h2>Recognition is only <em>the first step.</em></h2><p>EcoSort AI is designed to connect an item’s category with practical guidance and a more responsible next action.</p></div>
+  <div class="steps-grid">
+    <article class="step-card"><span class="step-no">01</span><div class="step-visual visual-camera">⌗</div><h3>Capture</h3><p>The user takes a photo of an everyday waste item using a smartphone.</p></article>
+    <article class="step-card"><span class="step-no">02</span><div class="step-visual visual-ai">✳</div><h3>Recognize</h3><p>A future computer-vision model will estimate the waste category and flag uncertain results.</p></article>
+    <article class="step-card"><span class="step-no">03</span><div class="step-visual visual-guide">☷</div><h3>Get guidance</h3><p>The app explains basic sorting steps and reminds users to check local rules.</p></article>
+    <article class="step-card"><span class="step-no">04</span><div class="step-visual visual-action">↗</div><h3>Take action</h3><p>Users can look up collection points and record items actually accepted by a partner.</p></article>
+  </div>
+</section>
+
+<section class="impact-section" id="impact">
+  <div class="impact-copy"><div class="eyebrow light">DESIGNED WITH THE SDGS IN MIND</div><h2>Small decisions.<br><em>Collective impact.</em></h2><p>EcoSort AI aims to make waste sorting more understandable and recycling information easier to act on. Its impact must be evaluated through user testing and verified collection records.</p></div>
+  <div class="sdg-list"><div class="sdg-card"><span class="sdg-number">11</span><div><b>Sustainable Cities and Communities</b><p>Support more responsible local waste practices.</p></div></div><div class="sdg-card"><span class="sdg-number">12</span><div><b>Responsible Consumption and Production</b><p>Encourage sorting and recovery of useful materials.</p></div></div><div class="sdg-card"><span class="sdg-number">13</span><div><b>Climate Action</b><p>Contribute to broader environmental efforts without overstating unmeasured impact.</p></div></div></div>
+</section>
+
+<section class="section about-section" id="about">
+  <div class="about-mark">♻</div><div><div class="eyebrow">ABOUT THE PROJECT</div><h2>Built for better <em>waste decisions.</em></h2><p>EcoSort AI is a student project concept for the FundDev International Competition 2026. The current website demonstrates the intended user experience. AI classification, verified recycling-point data, and impact metrics require further implementation and validation.</p><div class="tag-row"><span>Computer Vision</span><span>Mobile-first design</span><span>Circular economy</span></div></div>
+</section>
+</main>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">♻</span><span>EcoSort <b>AI</b><small>SMART WASTE ASSISTANT</small></span></a><p>Recognize Waste. Guide Action. Support a Circular Future.</p><small>Student concept · FundDev International Competition 2026</small></footer>
+<script src="app.js"></script>
+</body>
+</html>
